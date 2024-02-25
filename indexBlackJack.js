@@ -28,4 +28,4 @@ if (sum <= 20 ) {
     inGame = false
 }
 
-console.log(messaage)
+console.log(message)
