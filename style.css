@@ -1,6 +1,6 @@
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-image: url("./img/pexels-engin-akyurt.jpg");
+    background-image: url("./img/greenfelt.jpg");
     background-size: cover;
     text-align:center;
     color:white;
@@ -18,10 +18,12 @@ h1 {
 }
 
 #begin-el {
-    border-color: goldenrod;
-    color: goldenrod;
+    color: #016f32;
+    color: black;
+    width: 150px;
     padding: 5px 30px 5px 30px;
-    background: black;
+    background: goldenrod;
     font-weight: bold;
-
+    border:none;
+   border-radius: 2px;
 }
