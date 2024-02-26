@@ -17,15 +17,29 @@ let hasBlackJack = false
 let inGame = true
 
 let message = " "
+let messageEl = document.getElementById("mssg-el")
+
+
+//let sumEl = document.getElementById("sum-el")
+// use query selector instead for ^ sumEl
+let sumEl = document.querySelector("#sum-el")
+// use the # as an id selector
+// use the . as a class selector
+
+
+function startGame(){
 
 if (sum <= 20 ) {
+    sumEl.textContent = "Sum: " + sum
     message = "Do you want to draw a new card?"
 } else if (sum === 21 ) {
-    message = "Congratulations! You've won Blackjack🥳 "
+    message = "You've won Blackjack🥳 "
     hasBlackJack = true
 } else {
     message = "You're out of the game!"
     inGame = false
 }
 
-console.log(message)
+messageEl.textContent = message
+
+}
