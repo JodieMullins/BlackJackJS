@@ -27,9 +27,19 @@ let sumEl = document.querySelector("#sum-el")
 // use the . as a class selector
 
 
-function startGame(){
+let cardEl = document.getElementById("card-el")
+
+
+function startGame() {
+    renderGame()
+} 
+
+function renderGame(){
 
 if (sum <= 20 ) {
+
+    cardEl.textContent = "First Card: " + firstCard + " & Second Card: " + secondCard
+    
     sumEl.textContent = "Sum: " + sum
     message = "Do you want to draw a new card?"
 } else if (sum === 21 ) {
@@ -41,5 +51,13 @@ if (sum <= 20 ) {
 }
 
 messageEl.textContent = message
+} //end game function
+
+function drawCard() {
+    console.log("Drawing a new card from the deck!")
+    let cardVar = 4
+    sum = sum + cardVar
+    sumEl.textContent = "Sum: " + sum
+    renderGame
 
 }
