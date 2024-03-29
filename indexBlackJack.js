@@ -9,6 +9,9 @@ if (ageReq < 21) {
 
 let firstCard = 3
 let secondCard = 8
+// cards array
+let totalHand = [firstCard, secondCard]
+
  // decide fate of cards
 let sum = firstCard + secondCard
 // Has person won yet?
@@ -37,9 +40,12 @@ function startGame() {
 function renderGame(){
 
 if (sum <= 20 ) {
-
-    cardEl.textContent = "First Card: " + firstCard + " & Second Card: " + secondCard
+    // render out first card and second card
+    //cardEl.textContent = "First Card: " + firstCard + " & Second Card: " + secondCard
     
+    // render out all cards
+    cardEl.textContent = "First Card: " + totalHand[0] + " & Second Card: " + totalHand[1]
+
     sumEl.textContent = "Sum: " + sum
     message = "Do you want to draw a new card?"
 } else if (sum === 21 ) {
@@ -56,7 +62,11 @@ messageEl.textContent = message
 function drawCard() {
     console.log("Drawing a new card from the deck!")
     let cardVar = 4
-    sum = sum + cardVar
+  //  sum = sum + cardVar
+    sum += cardVar
+    // Push card to totalHand
+    totalHand.push(cardVar)
+    console.log(totalHand)
     sumEl.textContent = "Sum: " + sum
     renderGame
 
