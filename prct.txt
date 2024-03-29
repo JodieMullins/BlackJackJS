@@ -5,3 +5,28 @@ console.log(3 < 0)    // false
 console.log(3 >= 3)   //  true
 console.log(11 <= 11) //true
 console.log(3 <= 2)   // false
+
+//
+//
+//
+
+let featuredQuals = [
+	"Stanford's Code in Place Certificate of Completion",
+	"Hubspot Academy's SEO Certification",
+	"Code Kentucky Data Analysis Certificate of Completion",
+	"Valid Driver's License"
+]
+
+
+
+let experience = ["CEO at Scrimba", "Frontend developer at Xeneta", "People counter for Norstat"]
+
+// Make the following appear in the console:
+// Frontend developer at Xeneta
+// People counter for Norstat
+// CEO at Scrimba
+
+
+console.log( experience[1] )
+console.log( experience[2] )
+console.log( experience[0] )
