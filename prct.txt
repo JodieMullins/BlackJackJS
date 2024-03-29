@@ -30,3 +30,127 @@ let experience = ["CEO at Scrimba", "Frontend developer at Xeneta", "People coun
 console.log( experience[1] )
 console.log( experience[2] )
 console.log( experience[0] )
+
+
+
+
+
+let jodie = ["J M", 45000, true]
+
+
+
+
+
+
+
+let messages = [
+    "Hey, how's it going?",        
+    "I'm great, thank you! How about you?",
+    "All good. Been working on my portfolio lately."
+]
+
+let newMessage = "Same here!"
+
+messages.push(newMessage)
+
+console.log(messages[])
+
+// to remove
+messages.splice(3, 1)
+
+messages.pop()
+console.log(messages)
+
+
+// for loops
+
+let messages = [
+    "Hey, how's it going?",        
+    "I'm great, thank you! How about you?",
+    "All good. Been working on my portfolio lately.",
+    "Same here!",
+    "Great to hear"
+]
+
+// DRY - Don't repeat yourself
+// console.log(messages[0])
+// console.log(messages[1])
+// console.log(messages[2])
+// console.log(messages[3])
+
+for (let i = 0; i < 5; i += 1) {
+    console.log(messages[i])
+}
+
+
+
+
+for (let i = 0; i < messages.length; i += 1) {
+    console.log(messages[i])
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let cards = [7, 3, 9]
+
+// Create a for loop that logs out all the cards in the array
+// Use cards.length to specify how long the loop should run
+
+for (let i = 0; i < cards.length; i++) {
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let sentence = ["Hello ", "my ", "name ", "is ", "Per"] 
+let greetingEl = document.getElementById("greeting-el")
+
+// How do you keep the spaces between the words if I remve them from the array?
+
+for (let i = 0; i < sentence.length; i++) {
+    greetingEl.textContent += sentence[i]
+}
+
+// how to keep spaces
+
+for (let i = 0; i < sentence.length; i++) {
+    greetingEl.textContent += sentence[i] + " "
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
