@@ -9,6 +9,7 @@ if (ageReq < 21) {
 
 let firstCard = 3
 let secondCard = 8
+
 // cards array
 let totalHand = [firstCard, secondCard]
 
@@ -19,7 +20,7 @@ let hasBlackJack = false
 // Is the person in the game (false means lost the game)?
 let inGame = true
 
-let message = " "
+let message = ""
 let messageEl = document.getElementById("mssg-el")
 
 
@@ -37,30 +38,33 @@ function startGame() {
     renderGame()
 } 
 
+
 function renderGame() {
 
     cardEl.textContent = "Cards: " 
     for (let i = 0; i < totalHand.length; i++) { 
-        cardEl.textContent += " " + totalHand[i] + " "
+        cardEl.textContent += totalHand[i] + " "
     }
 
-if (sum <= 20 ) {
+    sumEl.textContent = "Sum: " + sum
+    
+    if (sum <= 20 ) {
     // render out first card and second card
     //cardEl.textContent = "First Card: " + firstCard + " & Second Card: " + secondCard
     
     // render out all cards
 //    cardEl.textContent = "First Card: " + totalHand[0] + " & Second Card: " + totalHand[1]
-    sumEl.textContent = "Sum: " + sum
+    
     message = "Do you want to draw a new card?"
-} else if (sum === 21 ) {
+    } else if (sum === 21 ) {
     message = "You've won Blackjack🥳 "
     hasBlackJack = true
-} else {
+    } else {
     message = "You're out of the game!"
     inGame = false
-}
+    }
 
-messageEl.textContent = message
+    messageEl.textContent = message
 } //end game function
 
 function drawCard() {
@@ -71,7 +75,7 @@ function drawCard() {
     // Push card to totalHand
     totalHand.push(cardVar)
     console.log(totalHand)
-    sumEl.textContent = "Sum: " + sum
-    renderGame
+ //   sumEl.textContent = "Sum: " + sum
+    renderGame()
 
 }
