@@ -7,8 +7,8 @@ if (ageReq < 21) {
     console.log("Welcome! Have fun playing BlackJack!")
 }
 
-let firstCard = 3
-let secondCard = 8
+let firstCard = getRandomCard()
+let secondCard = getRandomCard()
 
 // cards array
 let totalHand = [firstCard, secondCard]
@@ -38,9 +38,15 @@ function startGame() {
     renderGame()
 } 
 
+// create function to create a random card that always returns the number 5
+// creates hoisted variable
+function getRandomCard() {
+    return 5
+}
+
 
 function renderGame() {
-
+    
     cardEl.textContent = "Cards: " 
     for (let i = 0; i < totalHand.length; i++) { 
         cardEl.textContent += totalHand[i] + " "
@@ -69,7 +75,7 @@ function renderGame() {
 
 function drawCard() {
     console.log("Drawing a new card from the deck!")
-    let cardVar = 4
+    let cardVar = getRandomCard()
   //  sum = sum + cardVar
     sum += cardVar
     // Push card to totalHand
