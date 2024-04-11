@@ -37,15 +37,19 @@ function startGame() {
     renderGame()
 } 
 
-function renderGame(){
+function renderGame() {
+
+    cardEl.textContent = "Cards: " 
+    for (let i = 0; i < totalHand.length; i++) { 
+        cardEl.textContent += " " + totalHand[i] + " "
+    }
 
 if (sum <= 20 ) {
     // render out first card and second card
     //cardEl.textContent = "First Card: " + firstCard + " & Second Card: " + secondCard
     
     // render out all cards
-    cardEl.textContent = "First Card: " + totalHand[0] + " & Second Card: " + totalHand[1]
-
+//    cardEl.textContent = "First Card: " + totalHand[0] + " & Second Card: " + totalHand[1]
     sumEl.textContent = "Sum: " + sum
     message = "Do you want to draw a new card?"
 } else if (sum === 21 ) {
